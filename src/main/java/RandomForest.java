@@ -15,7 +15,8 @@ public class RandomForest {
     /**
      * 可用的线程数量
      * */
-    private static final int NUM_THREADS = Runtime.getRuntime().availableProcessors();
+    //private static final int NUM_THREADS = Runtime.getRuntime().availableProcessors();
+    private static final int NUM_THREADS = 10;
     /**
      *target类别数量
      * */

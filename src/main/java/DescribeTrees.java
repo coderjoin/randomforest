@@ -26,13 +26,17 @@ public class DescribeTrees {
                 int i;
                 if(sCurrentLine != null){
                     sCurrentLine = " " + sCurrentLine + " ";
+                    //System.out.println(sCurrentLine.length());
                     for(i=0; i < sCurrentLine.length(); i++){
                         if(Character.isWhitespace(sCurrentLine.charAt(i)))
                             spaceIndex.add(i);
                     }
+                    System.out.println(spaceIndex.size()-1);
                     int[] DataPoint = new int[spaceIndex.size()-1];
                     for(i=0; i<spaceIndex.size()-1; i++){
+
                         DataPoint[i]=Integer.parseInt(sCurrentLine.substring(spaceIndex.get(i)+1, spaceIndex.get(i+1)));
+
                     }
                     /* print DataPoint
                     for(k=0; k<DataPoint.length; k++){

@@ -2,15 +2,23 @@
  * @author qiaoying
  * @date 2019-03-07 14:23
  */
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 public class MainRun {
     @SuppressWarnings("static-access")
     public static void main(String args[]){
 
-        String trainPath = "C:\\Users\\kwok\\Desktop\\rf_data\\Data.txt";
-        String testPath = "C:\\Users\\kwok\\Desktop\\rf_data\\Test.txt";
-        int numTrees = 100;
+
+        String trainPath = "/home/qiaoying/train.txt";
+        String testPath = "/home/qiaoying/test.txt";
+
+//        String trainPath = "F:\\workspace\\randomforest\\src\\main\\java\\train.txt";
+//        String testPath = "F:\\workspace\\randomforest\\src\\main\\java\\test.txt";
+
+//        String trainPath = "F:\\workspace\\randomforest\\src\\main\\java\\Data.txt";
+//        String testPath = "F:\\workspace\\randomforest\\src\\main\\java\\Test1.txt";
+        int numTrees = 50;
 
         DescribeTrees DT = new DescribeTrees(trainPath);
         ArrayList<int[]> Train = DT.CreateInput(trainPath);
